@@ -10,6 +10,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Location {
   code: number;
@@ -124,6 +125,12 @@ export default function OrderPage() {
   return (
     <main className="min-h-screen bg-[#0a0a0c] text-white pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
+        <Image
+          width={412}
+          height={412}
+          src={`https://img.vietqr.io/image/mbbank-460008386-compact2.jpg?amount=25000&addInfo=${encodeURIComponent(transactionCode)}&accountName=PHAM%20QUOC%20TRINH`}
+          alt="QR Chuyển khoản"
+        />
         <div className="flex items-center gap-4 mb-10">
           <div className="p-3 bg-green-500 rounded-2xl text-black shadow-[0_0_20px_rgba(34,197,94,0.4)]">
             <Package size={28} />
