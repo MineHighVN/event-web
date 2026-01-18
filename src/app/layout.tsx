@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "Hành trình đi tìm Long Mạch Số và nhận lì xì đầu năm.",
     images: [
       {
-        url: "/assets/event-banner.png",
+        url: "/assets/event-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Overlix Event 2026",
