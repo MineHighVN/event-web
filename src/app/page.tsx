@@ -32,8 +32,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-// ... (GIỮ NGUYÊN PHẦN CẤU HÌNH FONT VÀ DATA KHÔNG THAY ĐỔI) ...
-
 const bodyFont = Be_Vietnam_Pro({
   subsets: ["vietnamese"],
   weight: ["300", "400", "500", "600", "700"],
@@ -137,7 +135,7 @@ type TaskStatus = "idle" | "checking" | "done";
 export default function EventPage() {
   const [completedTasks, setCompletedTasks] = useState<number[]>([]);
   const [completionTime, setCompletionTime] = useState<string>("");
-  const [username] = useState("MineHighVN");
+  const [username] = useState("Không xác định");
 
   const [status, setStatus] = useState<Record<number, TaskStatus>>({
     1: "idle",
@@ -244,7 +242,7 @@ export default function EventPage() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className={`${displayFont.className} text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6 relative z-10`}
           >
-            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-slate-100 to-slate-500 drop-shadow-2xl">
+            <span className="block text-transparent pt-6 bg-clip-text bg-gradient-to-b from-slate-100 to-slate-500 drop-shadow-2xl">
               Truyền Thuyết
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-red-500 animate-text-shimmer bg-[length:200%_auto]">
@@ -574,13 +572,17 @@ export default function EventPage() {
                   </div>
                   {/* ---------------------------------- */}
 
-                  <Link href="" className="block w-full">
+                  <a
+                    href="https://forms.gle/Yd4VPvzu6Wcc9pwK7"
+                    className="block w-full"
+                    target="_blank"
+                  >
                     <button
                       className={`${displayFont.className} w-full py-5 bg-gradient-to-r from-yellow-600 to-amber-700 text-white font-black rounded-xl uppercase tracking-wider shadow-lg hover:shadow-yellow-500/20 active:scale-95 transition-all flex items-center justify-center gap-2`}
                     >
                       <Gift size={20} /> Đăng ký trước ngay
                     </button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>
