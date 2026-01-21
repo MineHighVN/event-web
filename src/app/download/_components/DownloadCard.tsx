@@ -1,5 +1,7 @@
+"use client";
+
 import { Download, LucideIcon } from "lucide-react";
-import styles from "../download.module.css";
+import style from "../download.module.css";
 
 interface DownloadCardProps {
   title: string;
@@ -9,6 +11,7 @@ interface DownloadCardProps {
   isComingSoon?: boolean;
   buttonText?: string;
   metaText?: string;
+  onClick?: () => void;
 }
 
 export const DownloadCard = ({
@@ -19,29 +22,30 @@ export const DownloadCard = ({
   isComingSoon = false,
   buttonText,
   metaText,
+  onClick,
 }: DownloadCardProps) => {
   return (
     <div
-      className={`${styles.card} ${isComingSoon ? styles.cardFuture : styles.cardActive}`}
+      className={`${style.card} ${isComingSoon ? style.cardFuture : style.cardActive}`}
     >
-      <div className={`${styles.iconWrapper} ${iconBgClass}`}>
+      <div className={`${style.iconWrapper} ${iconBgClass}`}>
         <Icon size={32} />
       </div>
 
-      <h3 className={styles.cardTitle}>{title}</h3>
+      <h3 className={style.cardTitle}>{title}</h3>
 
-      <div className={styles.cardDesc}>{description}</div>
+      <div className={style.cardDesc}>{description}</div>
 
       {isComingSoon ? (
-        <button className={styles.disabledBtn}>Coming Soon</button>
+        <button className={style.disabledBtn}>Coming Soon</button>
       ) : (
-        <button className={styles.downloadBtn}>
+        <button onClick={onClick} className={style.downloadBtn}>
           <Download size={20} />
           {buttonText}
         </button>
       )}
 
-      {metaText && <div className={styles.meta}>{metaText}</div>}
+      {metaText && <div className={style.meta}>{metaText}</div>}
     </div>
   );
 };

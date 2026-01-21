@@ -13,23 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Overlix 2026 | Truyền Thuyết Khai Xuân",
+  title: "Overlix | Play and Connect",
   description:
-    "Tham gia hành trình khai xuân Overlix, hoàn thành nhiệm vụ và nhận những phần quà lì xì độc quyền.",
+    "Explore the Overlix ecosystem, unlock exclusive rewards, and experience the next generation of digital innovation",
 
   icons: {
     icon: [{ url: "/assets/icon.png", type: "image/png" }],
   },
 
   openGraph: {
-    title: "Overlix 2026 | Truyền Thuyết Khai Xuân",
-    description: "Hành trình đi tìm Long Mạch Số và nhận lì xì đầu năm.",
+    title: "Overlix | Play and Connect",
+    description:
+      "Join the Overlix community to discover new opportunities and exclusive platform benefits",
     images: [
       {
-        url: "/assets/event-banner.jpg",
+        url: "/assets/brand-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Overlix Event 2026",
+        alt: "Overlix Platform",
       },
     ],
   },
